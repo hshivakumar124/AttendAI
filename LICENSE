@@ -1,0 +1,56 @@
+MIT License
+
+Copyright (c) 2026 AttendAI Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+THIRD-PARTY NOTICES & UPSTREAM MODEL LICENSES
+================================================================================
+This repository contains original application source code released under the
+MIT License. However, the system integrates with or references third-party
+libraries, deep learning architectures, and pre-trained weights that are
+governed by their own separate upstream licenses. The MIT License applies ONLY
+to the original application code in this repository and DOES NOT grant license
+rights to third-party models or weights:
+
+1. Ultralytics YOLOv8:
+   - Upstream: Ultralytics Inc. (https://github.com/ultralytics/ultralytics)
+   - License: GNU Affero General Public License v3.0 (AGPL-3.0) or commercial.
+   - Note: AttendAI interfaces with YOLOv8 as an optional runtime module with
+     graceful fallback when uninstalled. If you build or distribute derivative
+     works incorporating Ultralytics, you must comply with AGPL-3.0 or obtain
+     a commercial license from Ultralytics.
+
+2. InsightFace & ArcFace:
+   - Upstream: DeepInsight (https://github.com/deepinsight/insightface)
+   - Code License: MIT License.
+   - Pre-Trained Weights License: InsightFace pre-trained models (e.g. Buffalo,
+     Antelopev2) are distributed under non-commercial research terms.
+   - Note: AttendAI does NOT bundle or distribute pre-trained model weight
+     files in this repository. Any pre-trained weights must be obtained
+     directly by users in accordance with InsightFace licensing.
+
+3. MediaPipe:
+   - Upstream: Google LLC (https://github.com/google/mediapipe)
+   - License: Apache License 2.0.
+
+4. OpenCV:
+   - Upstream: OpenCV team (https://opencv.org/)
+   - License: Apache License 2.0.

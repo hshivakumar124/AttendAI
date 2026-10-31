@@ -1,0 +1,97 @@
+# ==========================================
+# AttendAI — Comprehensive Production Gitignore
+# ==========================================
+
+# ─── Environment & Secrets (NEVER COMMIT) ───
+.env
+.env.*
+*.env
+*.env.local
+*.env.development
+*.env.test
+*.env.production
+!.env.example
+*.pem
+*.key
+*.crt
+*.cert
+
+# ─── Python & Virtual Environments ───
+__pycache__/
+*/__pycache__/
+**/*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+*/.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.installed.cfg
+*.egg
+build/
+dist/
+
+# ─── Databases & SQLite ───
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# ─── Biometrics, Face Data & Raw Media (PRIVACY CRITICAL) ───
+data/
+data/**
+data/face_samples/
+data/embeddings/
+data/reports/
+*.npy
+*.npz
+
+# ─── AI Models & Binary Weights (LFS / Storage required) ───
+ai_service/models/*.pt
+ai_service/models/*.pth
+ai_service/models/*.onnx
+ai_service/models/*.pkl
+ai_service/models/*.bin
+ai_service/models/*.engine
+!ai_service/models/.gitkeep
+
+# ─── Testing & Code Coverage ───
+.pytest_cache/
+*/.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.lcov
+.mypy_cache/
+.ruff_cache/
+
+# ─── Node & Frontend ───
+node_modules/
+*/node_modules/
+frontend/dist/
+frontend/.vite/
+.eslintcache
+
+# ─── OS & IDE ───
+.DS_Store
+*/.DS_Store
+**/.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ─── Logs & Temp ───
+*.log
+logs/
+tmp/
+temp/
+
+# ─── Alembic Compiled ───
+backend/alembic/versions/*.pyc
