@@ -121,14 +121,18 @@ Repeatable benchmark results executed via `ai_service/scripts/simulate_classroom
 -------------------------------------------------------
  • Test Environment:        Apple Silicon (macOS), CPU inference
  • Execution Mode:          Headless pipeline with lightweight feature extractor
- • Iterations:              3 consecutive runs of 30 synthetic frames (N = 90)
- • Run 1:                   8.16 ms / frame (122.54 FPS)
- • Run 2:                   6.80 ms / frame (147.14 FPS)
- • Run 3:                   6.78 ms / frame (147.39 FPS)
- • Multi-Run Mean Latency:  7.25 ms / frame
- • Multi-Run Mean Rate:     139.02 FPS
+ • Iterations:              3 consecutive runs of 30 synthetic frames (N = 90 frames total)
+ • Run 1:                   8.16 ms / frame (122.54 FPS, 0.245 s)
+ • Run 2:                   6.80 ms / frame (147.14 FPS, 0.204 s)
+ • Run 3:                   6.78 ms / frame (147.39 FPS, 0.204 s)
+ -------------------------------------------------------
+ • Mean Frame Latency:      ~7.25 ms / frame
+ • Aggregate Throughput:    ~138 FPS (90 frames / 0.653 s total processing time)
+ • Arithmetic Mean Rate:    ~139 FPS (arithmetic average of individual per-run FPS results)
 -------------------------------------------------------
 ```
+> **Throughput Measurement Distinction**:
+> Aggregate throughput is calculated as total frames divided by total wall-clock processing time (90 frames / 0.653 s ≈ 137.82 FPS ≈ 138 FPS), distinguished from the arithmetic mean of individual per-run rates (139.02 FPS).
 > **Note on Model Variations**:
 > The above benchmark reflects CPU inference using the built-in lightweight feature extractor and tracker. Deployments utilizing full GPU-accelerated deep learning backends (YOLOv8 face/device detection and ArcFace ResNet-100 ONNX models) will exhibit different latency and throughput profiles depending on GPU compute capabilities, batch size, and video resolution.
 
